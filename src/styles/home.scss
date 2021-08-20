@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap');
+@import "_mixins.scss";
+
+body {
+    background: white;
+    font-family: 'Dancing Script', cursive !important;
+
+}
+
+.main-container {
+    height: 100vh;
+    position: relative;
+    h1 {
+        font-size: clamp(100px, 15vw, 15vw);
+        font-weight: bold;
+        margin-bottom: 10vh;
+        max-width: 70vw;
+        text-transform: uppercase;
+        color: #111;
+    }
+
+    @include mq ('tablet', min) {
+        margin-left: 75px;
+        padding-left: 50px;
+        border-left: 1px solid rgb(116, 116, 116);
+        width: calc(100vw - 126px);
+    }
+}
