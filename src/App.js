@@ -3,13 +3,14 @@ import Home from './screens/Home'
 import './styles/home.scss'
 import CustomCursor from './customCursor/index'
 import useLocoScroll from './hooks/useLocoScroll'
+import Loader from './components/Loader'
 
 function App() {
   const [preloader, setPreloader] = useState(true)
 
   useLocoScroll(!preloader)
   
-  const [timer, setTimer] = useState(3)
+  const [timer, setTimer] = useState(500)
   const id = useRef(null)
 
   const clear = () => {
@@ -33,10 +34,7 @@ function App() {
     <div>
       <CustomCursor />
       {preloader ? (
-        <div className="loader-wrapper absolute">
-          <h1>Flirty flowers</h1>
-          <h2>Gaydenko Nikita</h2>
-        </div> 
+        <Loader />
       ) : (
         <Home />
       )}

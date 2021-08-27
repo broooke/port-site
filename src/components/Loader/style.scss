@@ -1,0 +1,64 @@
+// .loader-wrapper {
+//     display: flex;
+    
+//     align-items: center;
+//     flex-direction: column;
+//     background-color: #191919;
+//     color: #dbd8d6;
+
+//     h1 {
+//         font-size: 5.5vw;
+//         text-transform: uppercase;
+//         font-family: 'Bai Jamjuree', sans-serif;
+//         font-weight: 600;
+//     }
+//     h2 {
+//     font-size: 1.5vw;
+//     text-transform: uppercase;
+//     font-family: 'Bodoni Moda', serif;
+//     font-style: italic;
+//     margin-top: 10px;
+//     }
+// }
+
+// .absolute {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: black;
+//     z-index: 1;
+// }
+.loader-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6f0e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        opacity:0;
+        animation: show 3s 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        font-size: 5.5vw;
+        text-transform: uppercase;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: 600;
+        &.outline{
+            color: #f6f0e3;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000,
+        }
+    }
+
+    @for $i from 0 through 8 {
+        h1:nth-child(#{$i+1}n) {
+           animation-delay: #{$i}s;
+        }
+    }
+
+}
+
+@keyframes show{ 0%{ opacity:0; } 100% { opacity:1; } }
