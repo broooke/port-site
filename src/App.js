@@ -10,7 +10,7 @@ function App() {
 
   useLocoScroll(!preloader)
   
-  const [timer, setTimer] = useState(500)
+  const [timer, setTimer] = useState(5)
   const id = useRef(null)
 
   const clear = () => {
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       {preloader ? (
         <Loader />
       ) : (

@@ -5,11 +5,11 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: #111;
+        background: #f6f0e3;
         z-index: 10;
         will-change: transform;
-        transition: transform 1s cubic-bezier(1, 0,0,1);
-        color: white;
+        transition: transform 2s cubic-bezier(0.12, -1.99, 0.50, 1.99);
+        color: #111;
         z-index: 10;
         transform: translateX(-100%);
 
@@ -30,12 +30,39 @@
                     line-height: 1.1em;
                     transform: translate(-100%);
                     transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                    span{
+                        transition: letter-spacing 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        position: relative;
+                    }
+                      
+                    span::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 0;
+                        height: 6px;
+                        background-color: #111;
+                        transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                    }
+                      
+                    @media (hover: hover) and (pointer: fine) {
+                        span:hover::before{
+                          left: 0;
+                          right: auto;
+                          width: 100%;
+                        }
+                    }
                 }
 
                 &:hover{
                     cursor: pointer;
                     a {
                         font-weight: 800;
+                        span {
+                            letter-spacing: 15px;
+                            transition: letter-spacing 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        }
                     }
                     img {
                         opacity: 1;
@@ -95,7 +122,7 @@
                 @for $i from 0 through 4 {
                     li:nth-child(#{$i+1}n) {
                         a {
-                            transition-delay: #{$i / 10 + 0.8}s;
+                            transition-delay: #{$i + 0.8}s;
                         }
                     }
                 }

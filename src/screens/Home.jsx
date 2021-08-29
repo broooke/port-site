@@ -9,7 +9,7 @@ function Home() {
         <MenuManager>
             <Menu />
             <div data-scroll-container id="main-container" className="main-container">
-                <Header />
+
                 <h1 data-scroll-section>
                     Bleu <br /> Blanc <br /> Studio
                 </h1>

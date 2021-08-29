@@ -90,7 +90,7 @@ function Gallery({src, index, columnOffset}) {
           scroller: "#main-container",
           pin: true,
           scrub: 0.5,
-          snap: 1 / (sections.length - 1),
+          snap: 1,
           end: () => `+=${ref.current.offsetWidth}`,
         },
       });

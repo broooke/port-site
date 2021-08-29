@@ -7,7 +7,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;700&display=swap");
 @import "_mixins.scss";
 
-$bg-color: #f5f0ec;
+@font-face {
+	font-family: 'Monument';
+	src: url('./fonts/MonumentExtended-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$bg-color: #111;
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -15,8 +22,8 @@ $bg-color: #f5f0ec;
 
 body {
     background: $bg-color;
-    font-family: 'Dancing Script', cursive !important;
-    cursor: none;
+    font-family: 'Monument', cursive !important;
+    
 }
 
 .main-container {
@@ -26,11 +33,11 @@ body {
         font-weight: bold;
         max-width: 70vw;
         text-transform: uppercase;
-        color: #111;
+        color: #ffffff;
     }
 
     @include mq ('tablet', min) {
-        margin-left: 75px;
+        margin-left: 55px;
         padding-left: 50px;
         border-left: 1px solid rgb(116, 116, 116);
         width: calc(100vw - 126px);
