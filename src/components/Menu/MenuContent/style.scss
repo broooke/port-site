@@ -8,7 +8,7 @@
         background: #f6f0e3;
         z-index: 10;
         will-change: transform;
-        transition: transform 2s cubic-bezier(0.12, -1.99, 0.50, 1.99);
+        transition: transform 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         color: #111;
         z-index: 10;
         transform: translateX(-100%);
@@ -141,7 +141,7 @@
                 @for $i from 0 through 4 {
                     li:nth-child(#{$i+1}n) {
                         a {
-                            transition-delay: #{$i/10 + 1}s;
+                            transition-delay: #{$i / 10 + 1}s;
                         }
                     }
                 }

@@ -14,30 +14,40 @@
         border: none;
         background: 0 0;
         transition: transform 0.8s cubic-bezier(0.654, 0.045, 0.355, 1);
-
-        span {
-            &:after,
-            &:before {
-                content: '';
-                width: 2px;
-                height: 48px;
-                position: absolute;
-                background: #ffffff;
-                left: 50%;
-                top: 50%;
-                display: block;
-                will-change: transform;
-                transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-            }
-
-            &:before {
-                transform: translate(-5px, -50%) scaleY(0.7) rotate(180deg);
-            }
-
-            &:after {
-                transform: translate(5px, -50%) scaleY(0.7) rotate(0);
+        svg {
+            top: 50%;
+            left: 50%;
+            color: #ffffff;
+            transition: color 2s ease-in-out;
+            rect {
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
             }
         }
+
+        // span {
+        //     &:after,
+        //     &:before {
+        //         content: '';
+        //         width: 2px;
+        //         height: 48px;
+        //         position: absolute;
+        //         background: #ffffff;
+        //         left: 50%;
+        //         top: 50%;
+        //         display: block;
+        //         will-change: transform;
+        //         transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+        //     }
+
+        //     &:before {
+        //         transform: translate(-5px, -50%) scaleY(0.7) rotate(180deg);
+        //     }
+
+        //     &:after {
+        //         transform: translate(5px, -50%) scaleY(0.7) rotate(0);
+        //     }
+        // }
     }
 
     &.open {
@@ -45,20 +55,38 @@
         transition-delay: 0.2s;
 
         .menu-button {
-            transform: rotate(90deg);
+            transform: rotate(360deg);
         }
 
-        span {
-            &:before {
-                background-color: #111;
-                transform: translate(-50%, -50%) rotate(315deg);
+        svg {
+            top: 50%;
+            left: 50%;
+            color: #111;
+            rect:nth-child(2) {
+                opacity: 0;
             }
-
-            &:after {
-                background-color: #111;
-                transform: translate(-50%, -50%) rotate(45deg);
+            rect:nth-child(4) {
+                opacity: 0;
+            }
+            rect:nth-child(6) {
+                opacity: 0;
+            }
+            rect:nth-child(8) {
+                opacity: 0;
             }
         }
+
+        // span {
+        //     &:before {
+        //         background-color: #111;
+        //         transform: translate(-50%, -50%) rotate(315deg);
+        //     }
+
+        //     &:after {
+        //         background-color: #111;
+        //         transform: translate(-50%, -50%) rotate(45deg);
+        //     }
+        // }
     }
 
     @include mq('tablet', max) {

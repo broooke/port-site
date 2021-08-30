@@ -1,6 +1,7 @@
 import React from 'react'
 import Gallery from '../components/Gallery'
 import Header from '../components/Header'
+import Hello from '../components/Hello'
 import Menu from '../components/Menu'
 import MenuManager from '../components/Menu/MenuManager'
 
@@ -9,14 +10,8 @@ function Home() {
         <MenuManager>
             <Menu />
             <div data-scroll-container id="main-container" className="main-container">
-
-                <h1 data-scroll-section>
-                    Bleu <br /> Blanc <br /> Studio
-                </h1>
-                <h1 data-scroll-section>
-                    Bleu <br /> Blanc <br /> Studio
-                </h1>
-                <Gallery />
+                <Hello />
+                {/* <Gallery /> */}
             </div>
         </MenuManager>
     )

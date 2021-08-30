@@ -14,32 +14,31 @@
 	font-style: normal;
 }
 
-$bg-color: #111;
-
 ::-webkit-scrollbar { 
     display: none; 
 }
 
 body {
-    background: $bg-color;
+    background-color: #151515;
     font-family: 'Monument', cursive !important;
-    
+    color: #ffffff;
+}
+
+.app {
+    background-color: #000;
+    position: absolute;
+    z-index: 12;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(0);
+    transition: transform 1.5s ease-in-out;
 }
 
 .main-container {
     position: relative;
-    h1 {
-        font-size: clamp(100px, 15vw, 15vw);
-        font-weight: bold;
-        max-width: 70vw;
-        text-transform: uppercase;
-        color: #ffffff;
-    }
 
     @include mq ('tablet', min) {
-        margin-left: 55px;
-        padding-left: 50px;
-        border-left: 1px solid rgb(116, 116, 116);
+        padding: 0 80px;
         width: calc(100vw - 126px);
     }
 }

@@ -10,35 +10,42 @@ function App() {
 
   useLocoScroll(!preloader)
   
-  const [timer, setTimer] = useState(5)
+  const [timer, setTimer] = useState(7)
   const id = useRef(null)
 
   const clear = () => {
-      window.clearInterval(id.current)
-      setPreloader(false)
+    window.clearInterval(id.current)
+    setPreloader(false)
   }
 
   useEffect(() => {
-      id.current = window.setInterval(() => {
-          setTimer((timer) => timer - 1)
-      }, 1000)
+    id.current = window.setInterval(() => {
+      setTimer((timer) => timer - 1)
+    }, 1000)
   }, [])
 
   useEffect(() => {
-      if (timer === 0) {
-          clear()
-      }
+    if (timer === 0) {
+      clear()
+    }
   }, [timer])
 
+  setTimeout(() => {
+    document.querySelector('.app').style.transform = 'translateY(-100%)'
+  }, 7100)
+
   return (
-    <div>
+    <>
       {/* <CustomCursor /> */}
       {preloader ? (
         <Loader />
       ) : (
+        <>
+        <div className='app'></div>
         <Home />
+        </>
       )}
-    </div>
+    </>
   );
 }
 
