@@ -3,7 +3,7 @@ import './style.scss'
 
 function Hello() {
     return (
-        <div className='text-wrapper'>
+        <div data-scroll-section className='text-wrapper'>
             <h1 className="hi-text">
                 Hi, <br></br>
                 I am Nikita

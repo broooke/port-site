@@ -10,8 +10,9 @@ function Home() {
         <MenuManager>
             <Menu />
             <div data-scroll-container id="main-container" className="main-container">
+                <Header />
                 <Hello />
-                {/* <Gallery /> */}
+                <Gallery />
             </div>
         </MenuManager>
     )

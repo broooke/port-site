@@ -3,11 +3,11 @@ import './style.scss'
 
 function Header() {
     return (
-        <div className="header">
+        <div data-scroll-section className="header">
             <div className="header-wrap">
-                <div>menu</div>
-                <div>Flirty Flowers</div>
-                <div>cart</div>
+                <p>about me</p>
+                <p>my works</p>
+                <p>lets collab</p>
             </div>
         </div>
     )

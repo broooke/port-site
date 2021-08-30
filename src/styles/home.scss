@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap');
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;700&display=swap");
 @import "_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 @font-face {
 	font-family: 'Monument';
@@ -21,7 +15,7 @@
 body {
     background-color: #151515;
     font-family: 'Monument', cursive !important;
-    color: #ffffff;
+    color: #dbd8d6;
 }
 
 .app {

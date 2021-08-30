@@ -1,7 +1,10 @@
 .header{
+    padding: 50px 0;
+    display: flex;
+    justify-content: flex-end;
     .header-wrap{
         display: flex;
         justify-content: space-between;
-        padding-right: 50px;
+        gap: 1rem;
     }
 }

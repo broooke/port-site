@@ -32,7 +32,8 @@
 // }
 
 .loader-wrapper {
-    height: 97vh;
+    height: 100vh;
+    overflow-y: hidden;
     padding: 10px 0;
     width: 100vw;
     background-color: #f6f0e3;
