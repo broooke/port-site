@@ -102,7 +102,7 @@ function Gallery({src, index, columnOffset}) {
     setActiveImage(index + 1);
   }
   return (
-    <section data-scroll-section className="section-wrapper gallery-wrap">
+    <section data-scroll-section className={cn("section-wrapper", "gallery-wrap")}>
       <div className="gallery" ref={ref}>
         <div className="gallery-counter">
           <span>{activeImage}</span>

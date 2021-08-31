@@ -8,6 +8,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Conv_Ogg Roman';
+	src: url('./fonts/Ogg Roman.eot');
+	src: local('☺'), url('./fonts/Ogg Roman.woff') format('woff'), url('./fonts/Ogg Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -15,7 +23,7 @@
 body {
     background-color: #151515;
     font-family: 'Monument', cursive !important;
-    color: #dbd8d6;
+    color: #ffffff;
 }
 
 .app {

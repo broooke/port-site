@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../Logo'
 import MenuButton from './MenuButton'
 import MenuContent from './MenuContent'
 

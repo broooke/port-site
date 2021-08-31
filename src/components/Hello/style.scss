@@ -1,11 +1,41 @@
 .text-wrapper {
     margin-top: 20px;
-    .hi-text {
-        font-size: 20vw;
-        color: #dbd8d6;
-    }
-    .sub-text {
-        position: absolute;
-        left: 810px;
+    .text-block {
+        span {
+            font-size: calc(16px + 44*(100vw - 320px)/1600);
+            font-family:'Conv_Ogg Roman',Sans-Serif;
+            font-weight: 100;
+            position: relative;
+            width: 70%;   
+        }
+        h1 {
+            font-size: calc(34px + 106*(60vw - 320px)/1600);
+            
+        }
+        .circle-wrapper {
+            position: relative;
+            display: inline-block;
+            .title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-size: 1.125rem;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.33);
+                -webkit-transition: .4s ease color;
+                -o-transition: .4s ease color;
+                transition: .4s ease color;
+                span {
+                    text-align: center;
+                    font-size: 1.125rem;
+                    display: block;
+                    line-height: 1.34;
+                    letter-spacing: 0.5rem;
+                }
+            }
+        }
     }
 }

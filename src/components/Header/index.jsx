@@ -5,9 +5,14 @@ function Header() {
     return (
         <div data-scroll-section className="header">
             <div className="header-wrap">
-                <p>about me</p>
-                <p>my works</p>
-                <p>lets collab</p>
+                <div className='logo'>
+                    <h1>Gaydenko<br></br>Nikita</h1>
+                </div>
+                <div className='links'>
+                    <p>about me</p>
+                    <p>my works</p>
+                    <p>lets collab</p>
+                </div>
             </div>
         </div>
     )

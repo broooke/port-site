@@ -2,17 +2,21 @@
 
 .menu-button-wrap {
     position: fixed;
-    left: 70px;
-    top: 35px;
+    // left: 70px;
+    // top: 35px;
+    right: 40px;
+    bottom: 40px;
     z-index: 11;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    padding: 15px;
     transition: transform 0.8s cubic-bezier(0.654, 0.045, 0.355, 1);
-
     .menu-button {
         cursor: pointer;
         width: 48px;
         height: 48px;
-        border: none;
         background: 0 0;
+        border: none;
         transition: transform 0.8s cubic-bezier(0.654, 0.045, 0.355, 1);
         svg {
             top: 50%;
@@ -51,8 +55,9 @@
     }
 
     &.open {
-        transform: translateX(80px);
-        transition-delay: 0.2s;
+        transform: translateY(-85vh);
+        transition-delay: 1.2s;
+        border: 1px solid #111;
 
         .menu-button {
             transform: rotate(360deg);
