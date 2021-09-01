@@ -25,6 +25,9 @@ function Hello() {
                         <span className="s-03"><span>creativity</span></span>
                     </div>
                 </div>
+                {/* <div>
+                    <img src="https://ocean-of-technologies.s3.us-east-2.amazonaws.com/hector_detour03.png" />
+                </div> */}
             </div>
         </div>
     )
