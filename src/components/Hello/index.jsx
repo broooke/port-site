@@ -1,30 +1,113 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './style.scss'
+import ImageStack from '../ImageStack'
+
+
+export const pageData = [
+    {
+      url: "https://images.unsplash.com/photo-1593939535589-8356e421b3cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1923&q=80",
+      title: "Chanel",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1618436917352-cd3d11ea4d15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=975&q=80",
+      title: "Dior",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1550270428-27e40d58bb7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      title: "Hermès",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=975&q=80",
+      title: "Yves Saint Laurent",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+      title: "Rolex",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600704514457-fcd7f8c05a31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      title: "ZARA",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1401&q=80",
+      title: "Gucci",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1564845301949-6eae59181233?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+      title: "Louis Vuitton",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1587701711862-d52756eacc6c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      title: "Supreme",
+    }
+];
+
+
 
 function Hello() {
+    const [rotationPosition, setRotation] = useState(new Array(pageData.length).fill(0));
+    const [activeIndex, setActiveIndex] = useState(-1);
+
+    const handleSetRotation = (itemIndex) => {
+        const newRotation = Math.random() * 7 * (Math.round(Math.random) ? 1 : -1)
+        const tempState = [...rotationPosition]
+
+        tempState[itemIndex] = newRotation
+        setRotation(tempState)
+        setActiveIndex(itemIndex)
+    }
+
     return (
         <div data-scroll-section className='text-wrapper'>
+
             <div className='text-block'>
-                <span>01</span>
-                <h1>Hello<br></br>I'm Nikita<br></br>
-                    Fullstack<br></br>Developer<br></br>
-                    Driven to create<br></br>cool work
-                </h1>
-                <div className='circle-wrapper'>
-                    <svg width="403px" height="403px" viewBox="0 0 403 403" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <g id="btn-circle-wrap" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                            <g id="btn-circle-wrapper" transform="translate(-237.000000, -465.000000)">
-                                <g id="btn-circle" transform="translate(166.000000, 466.000000)">
-                                    <path d="M272.5,401 C383.233092,401 473,311.233092 473,200.5 C473,89.7669077 383.233092,0 272.5,0 C161.766908,0 72,89.7669077 72,200.5" id="Shape" stroke="#ffffff" opacity="0.531542969" transform="translate(272.500000, 200.500000) scale(-1, -1) translate(-272.500000, -200.500000) " strokeDasharray="944.9669189453125" style={{strokeDashoffset: '0px'}}></path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <div className="title">
-                        <span className="s-03"><span>show</span></span><br></br>
-                        <span className="s-03"><span>creativity</span></span>
+                <span className='counter'>01</span>
+                <div className='hello-text-wrap'>
+                    <h1>
+                        <span
+                            className='title-item'
+                            onMouseEnter={() => handleSetRotation(0)}
+                            onMouseLeave={() => setActiveIndex(-1)}
+                        >Hello, I'm Nikita.</span><br></br>
+                        <span 
+                            className='title-item'
+                            onMouseEnter={() => handleSetRotation(1)}
+                            onMouseLeave={() => setActiveIndex(-1)}
+                        >Fullstack Developer.</span><br></br>
+                        <span
+                            className='title-item'
+                            onMouseEnter={() => handleSetRotation(2)}
+                            onMouseLeave={() => setActiveIndex(-1)}
+                        >Based in Russia.</span><br></br>
+                        <span 
+                            className='title-item'
+                            onMouseEnter={() => handleSetRotation(3)}
+                            onMouseLeave={() => setActiveIndex(-1)}
+                        >Driven to create</span><br></br>
+                        <span
+                            className='title-item'
+                            onMouseEnter={() => handleSetRotation(4)}
+                            onMouseLeave={() => setActiveIndex(-1)}
+                        >cool work.</span>
+                    </h1>
+                    <div className='image-container'>
+                        {pageData.map(({url}, index) => (
+                            <ImageStack 
+                                key={index}
+                                url={url}
+                                active={activeIndex===index}
+                                rotationPosition={rotationPosition[index]}
+                            />
+                        ))}
                     </div>
                 </div>
+            </div>
+            <div className='circle-wrapper'>
+                <div className='circle'></div>
+                <span className='title'>
+                    <span className='show-title'>SHOW</span>
+                    <span className='show-creat'>CREATIVITY</span>
+                </span>
             </div>
         </div>
     )
