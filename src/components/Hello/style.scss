@@ -20,13 +20,13 @@
                 position: relative;
                 display: block;
                 &:hover {
-                    span {
+                    .title-item {
                         -webkit-text-stroke-width: 1px;
                         -webkit-text-stroke-color: #ffffff;
                         color: #111;
                     }
                 }
-                span {
+                .title-item {
                     font-size: calc(34px + 130*(60vw - 320px)/1600);
                     display: block;
                     &:hover {

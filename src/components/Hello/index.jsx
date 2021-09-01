@@ -45,8 +45,9 @@ export const pageData = [
 
 
 function Hello() {
-    const [rotationPosition, setRotation] = useState(new Array(pageData.length).fill(0));
+    const [rotationPosition, setRotation] = useState([-2.650634094186824,-5.997343514216851, -0.41722913131360184, -3.765807192010152, -4.67282435797097, -2.462342243, -1.76786544]);
     const [activeIndex, setActiveIndex] = useState(-1);
+    console.log(rotationPosition)
 
     const handleSetRotation = (itemIndex) => {
         const newRotation = Math.random() * 7 * (Math.round(Math.random) ? 1 : -1)
