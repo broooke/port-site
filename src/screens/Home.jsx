@@ -3,6 +3,7 @@ import About from '../components/About'
 import Gallery from '../components/Gallery'
 import Header from '../components/Header'
 import Hello from '../components/Hello'
+import Lines from '../components/Lines'
 import Menu from '../components/Menu'
 import MenuManager from '../components/Menu/MenuManager'
 
@@ -15,6 +16,7 @@ function Home() {
                 <Hello />
                 <About />
                 <Gallery />
+                <Lines />
             </div>
         </MenuManager>
     )

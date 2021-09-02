@@ -8,15 +8,51 @@ function About() {
                 <span>02</span>
                 <h1>About me</h1>
             </div>
+            <div className='subtitle-wrap'>
+                <h1>
+                    killing<br></br>of the<br></br> ordi<br></br>-nary
+                </h1>
+            </div>
             <div className='about-wrap'>
-                <div className="frontend-block">
-                    <h1>Frontend</h1>
-                </div>
-                <div className='image-block'>
-                    <img src="./images/header.png" alt="" />
-                </div>
-                <div className="backend-block">
-                    <h1>Backend</h1>
+                <div className='text-wrap'>
+                    <h1 className='whatido-title'>what i do</h1>
+                    <p>i am fullstack developer with primary focus on Django + React who love creating, designing and
+                        developing wow projects. 
+                    </p>
+                    <div className='skills-wrap'>
+                        <div className='skill-column'>
+                            <h1>frontend</h1>
+                            <ul>
+                                <li>- React</li>
+                                <li>- Redux</li>
+                                <li>- Bootstrap</li>
+                                <li>- Material UI</li>
+                                <li>- HTML/CSS</li>
+                                <li>- JS</li>
+                            </ul>
+                        </div>
+                        <div className='skill-column'>
+                            <h1>backend</h1>
+                            <ul>
+                                <li>- Python</li>
+                                <li>- Django</li>
+                                <li>- DRF</li>
+                                <li>- Celery</li>
+                                <li>- postgresql</li>
+                                <li>- redis</li>
+                            </ul>
+                        </div>
+                        <div className='skill-column'>
+                            <h1>deploy/devops</h1>
+                            <ul>
+                                <li>- heroku</li>
+                                <li>- aws</li>
+                                <li>- docker</li>
+                                <li>- nginx</li>
+                                <li>- gunicorn</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -103,6 +103,10 @@ function Gallery({src, index, columnOffset}) {
   }
   return (
     <section data-scroll-section className={cn("section-wrapper", "gallery-wrap")}>
+      <div className='works-title-wrap'>
+        <span>03</span>
+        <h1>My works</h1>
+      </div>
       <div className="gallery" ref={ref}>
         <div className="gallery-counter">
           <span>{activeImage}</span>

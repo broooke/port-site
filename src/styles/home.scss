@@ -40,7 +40,6 @@ body {
     position: relative;
 
     @include mq ('tablet', min) {
-        padding: 0 80px;
-        width: calc(100vw - 126px);
+        padding: 0 50px;
     }
 }

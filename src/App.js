@@ -10,7 +10,7 @@ function App() {
 
   useLocoScroll(!preloader)
   
-  const [timer, setTimer] = useState(1)
+  const [timer, setTimer] = useState(7)
   const id = useRef(null)
 
   const clear = () => {
@@ -32,7 +32,7 @@ function App() {
 
   setTimeout(() => {
     document.querySelector('.app').style.transform = 'translateY(-100%)'
-  }, 1100)
+  }, 7100)
 
   return (
     <>

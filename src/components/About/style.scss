@@ -1,32 +1,58 @@
 .about-block {
     position: relative;
-    height: 150vh;
+    height: auto;
     margin-top: 150px;
+    .subtitle-wrap {
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        h1 {
+            font-size: calc(150px + 130*(100vw - 320px)/1600);
+        }
+    }
     .about-wrap {
         display: flex;
-        margin-top: 200px;
-        .frontend-block {
-            width: 40%;
-            h1 {
+        margin-top: 150px;
+        justify-content: center;
+        .text-wrap {
+            width: 50%;
+            .whatido-title {
                 text-align: right;
-                font-size: calc(16px + 44*(100vw - 320px)/1600);
+                font-size: calc(15px + 15*(100vw - 320px)/1600);
+                &::before{
+                    display: inline-block;
+                    width: .5em;
+                    height: .5em;
+                    margin-right: .25em;
+                    background-color: #ffffff;
+                    border-radius: 100%;
+                    content: "";
+                }
             }
-        }
-        .backend-block {
-            width: 40%;
-            h1 {
-                font-size: calc(16px + 44*(100vw - 320px)/1600);
+            p {
+                margin-top: 70px;
+                font-size: calc(30px + 20*(100vw - 320px)/1600);
+                line-height: 1.6;
             }
-        }
-        .image-block {
-            width: 20%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            img {
-                position: fixed;
-                display: block;
-                max-width: 500px;
+            .skills-wrap {
+                display: flex;
+                gap: 5rem;
+                margin-top: 100px;
+                .skill-column {
+                    width: 33.333%;
+                    h1 {
+                        font-size: calc(20px + 10*(100vw - 320px)/1600);
+                        font-weight: 100;
+                    }
+                    ul {
+                        margin-top: 30px;
+                        li {
+                            color: #fefefe;
+                            opacity: 0.6;
+                            line-height: 1.5;
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,6 +1,38 @@
 .gallery-wrap {
     margin-left: -5vw;
     margin-right: -5vw;
+    margin-top: 200px;
+    .works-title-wrap {
+        display: flex;
+        margin-left: 5vw;
+        gap: 5rem;
+        position: relative;
+        justify-content: flex-start;
+        span {
+            font-size: calc(16px + 44*(100vw - 320px)/1600);
+            font-family:'Conv_Ogg Roman',Sans-Serif;
+            font-weight: 100;
+            position: relative;
+            width: 10%;
+            text-align: right;
+        }
+        h1 {
+            width: 70%;
+            position: relative;
+            font-size: calc(34px + 106*(100vw - 320px)/1600);
+            &:after {
+                transition: opacity .35s cubic-bezier(.3,.86,.36,.95);
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 140%;
+                width: 90%;
+                height: 1px;
+                background-color: #ffffff;
+            }
+        }
+    }
 
     .gallery-counter {
         position: absolute;
@@ -26,6 +58,7 @@
 
     .gallery {
         height: 80vh;
+        margin-top: 8vh;
         padding: 10vh 0;
         width: 400%;
         display: flex;
