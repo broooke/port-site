@@ -33,6 +33,20 @@
                 margin-top: 70px;
                 font-size: calc(30px + 20*(100vw - 320px)/1600);
                 line-height: 1.6;
+                span {
+                    position: relative;
+                    &::after {
+                        transition: opacity .35s cubic-bezier(.3,.86,.36,.95);
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        height: 0.15em;
+                        width: auto;
+                        background-color: #ffffff;
+                    }
+                }
             }
             .skills-wrap {
                 display: flex;

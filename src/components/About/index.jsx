@@ -16,7 +16,7 @@ function About() {
             <div className='about-wrap'>
                 <div className='text-wrap'>
                     <h1 className='whatido-title'>what i do</h1>
-                    <p>i am fullstack developer with primary focus on Django + React who love creating, designing and
+                    <p>i am fullstack developer with primary focus on <span>Django</span>/<span>React</span> who love creating, designing and
                         developing wow projects. 
                     </p>
                     <div className='skills-wrap'>
