@@ -1,3 +1,33 @@
 .lines-block {
     height: 50vh;
+    .title-lines-wrap {
+        display: flex;
+        gap: 5rem;
+        position: relative;
+        justify-content: center;
+        span {
+            font-size: calc(16px + 44*(100vw - 320px)/1600);
+            font-family:'Conv_Ogg Roman',Sans-Serif;
+            font-weight: 100;
+            position: relative;
+            width: 10%;
+            text-align: right;
+        }
+        h1 {
+            width: 70%;
+            position: relative;
+            font-size: calc(34px + 106*(100vw - 320px)/1600);
+            &:after {
+                transition: opacity .35s cubic-bezier(.3,.86,.36,.95);
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 140%;
+                width: 90%;
+                height: 1px;
+                background-color: #ffffff;
+            }
+        }
+    }
 }

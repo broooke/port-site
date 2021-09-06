@@ -53,6 +53,13 @@ function About() {
                             </ul>
                         </div>
                     </div>
+                    <div className='circle-wrapper'>
+                        <div className='circle'></div>
+                        <span className='title'>
+                            <span className='show-title'>SHOW</span>
+                            <span className='show-creat'>CREATIVITY</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

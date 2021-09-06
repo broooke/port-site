@@ -16,6 +16,57 @@
         justify-content: center;
         .text-wrap {
             width: 50%;
+            .circle-wrapper {
+                position: relative;
+                margin: 0 auto;
+                display: inline-block;
+                &:hover {
+                    .circle {
+                        background-position: right bottom;
+                    }
+                    .title {
+                        color: #111;
+                        transition: all 1s ease-in-out;
+                        .show-title, .show-creat {
+                            transform: rotate(180deg);
+                        }
+                    }
+                } 
+                .circle {
+                    border-radius: 50%;
+                    border: 1px solid #ffffff;
+                    background: linear-gradient(to right, transparent 50%, #ffffff 50%);
+                    background-size: 200% 100%;
+                    background-position: left bottom;
+                    transition: all 2s ease;
+                    width: calc(146px + 100*(100vw - 320px)/1600);;
+                    height: calc(146px + 100*(100vw - 320px)/1600);;
+                }
+                .title {
+                    position: absolute;
+                    color: #ffffff;
+                    top: 50%;
+                    left: 55%;
+                    transform: translate(-50%, -50%);
+                    font-size: 0.825rem;
+                    -ms-transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -webkit-transition: all 1s ease-in-out;
+                    -o-transition: all 1s ease-in-out;
+                    transition: all 1s ease-in-out;
+                    margin: 0;
+                    padding: 0;
+                    .show-title, .show-creat {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.825rem;
+                        display: block;
+                        line-height: 1.34;
+                        letter-spacing: 0.5rem;
+                        transition: all 1s ease-in-out;
+                    }
+                }
+            }
             .whatido-title {
                 text-align: right;
                 font-size: calc(15px + 15*(100vw - 320px)/1600);

@@ -15,7 +15,7 @@ function Home() {
                 <Header />
                 <Hello />
                 <About />
-                <Gallery />
+                {/* <Gallery /> */}
                 <Lines />
             </div>
         </MenuManager>

@@ -1,17 +1,9 @@
 @import "_mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
 @font-face {
 	font-family: 'Monument';
 	src: url('./fonts/MonumentExtended-Regular.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Conv_Ogg Roman';
-	src: url('./fonts/Ogg Roman.eot');
-	src: local('☺'), url('./fonts/Ogg Roman.woff') format('woff'), url('./fonts/Ogg Roman.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -22,7 +14,7 @@
 
 body {
     background-color: #151515;
-    font-family: 'Monument', cursive !important;
+    font-family: 'Nova Square', cursive !important;
     color: #ffffff;
 }
 

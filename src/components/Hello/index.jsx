@@ -62,14 +62,13 @@ function Hello() {
         <div data-scroll-section className='text-wrapper'>
 
             <div className='text-block'>
-                <span className='counter'>01</span>
                 <div className='hello-text-wrap'>
                     <h1>
                         <span
                             className='title-item'
                             onMouseEnter={() => handleSetRotation(0)}
                             onMouseLeave={() => setActiveIndex(-1)}
-                        >Hello, I'm Nikita.</span><br></br>
+                        >I'm Nikita.</span><br></br>
                         <span 
                             className='title-item'
                             onMouseEnter={() => handleSetRotation(1)}
@@ -105,13 +104,6 @@ function Hello() {
                 {/* <div>
                     <img src="https://ocean-of-technologies.s3.us-east-2.amazonaws.com/hector_detour03.png" />
                 </div> */}
-            </div>
-            <div className='circle-wrapper'>
-                <div className='circle'></div>
-                <span className='title'>
-                    <span className='show-title'>SHOW</span>
-                    <span className='show-creat'>CREATIVITY</span>
-                </span>
             </div>
         </div>
     )
