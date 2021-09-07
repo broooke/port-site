@@ -1,5 +1,8 @@
 .lines-block {
-    height: 50vh;
+    height: 150vh;
+    .fix {
+        position: fixed;
+    }
     .title-lines-wrap {
         display: flex;
         gap: 5rem;

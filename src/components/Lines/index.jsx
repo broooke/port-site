@@ -8,8 +8,8 @@ function Lines() {
                 <span>04</span>
                 <h1>Made with</h1>
             </div>
-            <div>
-                <span></span>
+            <div className='fix'>
+                <span>fdsfds</span>
             </div>
         </div>
     )

@@ -60,47 +60,44 @@ function Hello() {
 
     return (
         <div data-scroll-section className='text-wrapper'>
-
             <div className='text-block'>
-                <div className='hello-text-wrap'>
-                    <h1>
-                        <span
-                            className='title-item'
-                            onMouseEnter={() => handleSetRotation(0)}
-                            onMouseLeave={() => setActiveIndex(-1)}
-                        >I'm Nikita.</span><br></br>
-                        <span 
-                            className='title-item'
-                            onMouseEnter={() => handleSetRotation(1)}
-                            onMouseLeave={() => setActiveIndex(-1)}
-                        >Fullstack Developer.</span><br></br>
-                        <span
-                            className='title-item'
-                            onMouseEnter={() => handleSetRotation(2)}
-                            onMouseLeave={() => setActiveIndex(-1)}
-                        >Based in Russia.</span><br></br>
-                        <span 
-                            className='title-item'
-                            onMouseEnter={() => handleSetRotation(3)}
-                            onMouseLeave={() => setActiveIndex(-1)}
-                        >Driven to create</span><br></br>
-                        <span
-                            className='title-item'
-                            onMouseEnter={() => handleSetRotation(4)}
-                            onMouseLeave={() => setActiveIndex(-1)}
-                        >cool work.</span>
-                    </h1>
-                    <div className='image-container'>
-                        {pageData.map(({url}, index) => (
-                            <ImageStack 
-                                key={index}
-                                url={url}
-                                active={activeIndex===index}
-                                rotationPosition={rotationPosition[index]}
-                            />
-                        ))}
-                    </div>
-                </div>
+              <h1>
+                  <span
+                      className='title-item'
+                      onMouseEnter={() => handleSetRotation(0)}
+                      onMouseLeave={() => setActiveIndex(-1)}
+                  >I'm Nikita.</span><br></br>
+                  <span 
+                      className='title-item'
+                      onMouseEnter={() => handleSetRotation(1)}
+                      onMouseLeave={() => setActiveIndex(-1)}
+                  >Fullstack Developer.</span><br></br>
+                  <span
+                      className='title-item'
+                      onMouseEnter={() => handleSetRotation(2)}
+                      onMouseLeave={() => setActiveIndex(-1)}
+                  >Based in Russia.</span><br></br>
+                  <span 
+                      className='title-item'
+                      onMouseEnter={() => handleSetRotation(3)}
+                      onMouseLeave={() => setActiveIndex(-1)}
+                  >Driven to create</span><br></br>
+                  <span
+                      className='title-item'
+                      onMouseEnter={() => handleSetRotation(4)}
+                      onMouseLeave={() => setActiveIndex(-1)}
+                  >cool work.</span>
+              </h1>
+              <div className='image-container'>
+                  {pageData.map(({url}, index) => (
+                      <ImageStack 
+                          key={index}
+                          url={url}
+                          active={activeIndex===index}
+                          rotationPosition={rotationPosition[index]}
+                      />
+                  ))}
+              </div>
                 {/* <div>
                     <img src="https://ocean-of-technologies.s3.us-east-2.amazonaws.com/hector_detour03.png" />
                 </div> */}
