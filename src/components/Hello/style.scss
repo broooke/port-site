@@ -1,0 +1,70 @@
+.text-wrapper {
+    margin-top: 60px;
+    position: relative;
+    .text-block {
+        position: relative;
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+        // .counter {
+        //     font-size: calc(16px + 44*(100vw - 320px)/1600);
+        //     font-family:'Conv_Ogg Roman',Sans-Serif;
+        //     font-weight: 100;
+        //     position: relative;
+        //     width: 10%;
+        //     text-align: right;
+        // }
+        h1 {
+            position: relative;
+            display: block;
+            padding: 0 15vw 0 15vw;
+            &:hover {
+                .title-item {
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #ffffff;
+                    color: #111;
+                }
+            }
+            .title-item {
+                font-size: calc(135px + 160*(60vw - 320px)/1600);
+                line-height: 0.8;
+                display: block;
+                
+                &:hover {
+                    opacity: 1;
+                    -webkit-text-stroke-width: 0px;
+                    -webkit-text-stroke-color: none;
+                    color: #bababa;
+                }
+            }
+        }
+        .image-container {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -6.597vw;
+            height: 80vh;
+            width: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            top: 0;
+
+            img {
+                position: absolute;
+                height: 50vh;
+                width: auto;
+                transition: transform 0.1s ease-in-out;
+                filter: grayscale(1);
+                z-index: 98;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
+                    0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
+                    0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
+        
+                &.active {
+                    z-index: 99;
+                }
+            }
+        }
+    }
+}

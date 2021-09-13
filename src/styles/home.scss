@@ -1,0 +1,35 @@
+@import "_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+@font-face {
+	font-family: 'Monument';
+	src: url('./fonts/MonumentExtended-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body {
+    background-color: #151515;
+    font-family: 'Nova Square', cursive !important;
+    color: #ffffff;
+}
+
+.app {
+    background-color: #000;
+    position: absolute;
+    z-index: 12;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(0);
+    transition: transform 1.5s ease-in-out;
+}
+
+.main-container {
+    position: relative;
+
+
+}

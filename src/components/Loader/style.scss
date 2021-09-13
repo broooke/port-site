@@ -1,0 +1,88 @@
+// .loader-wrapper {
+//     display: flex;
+    
+//     align-items: center;
+//     flex-direction: column;
+//     background-color: #191919;
+//     color: #dbd8d6;
+
+//     h1 {
+//         font-size: 5.5vw;
+//         text-transform: uppercase;
+//         font-family: 'Bai Jamjuree', sans-serif;
+//         font-weight: 600;
+//     }
+//     h2 {
+//     font-size: 1.5vw;
+//     text-transform: uppercase;
+//     font-family: 'Bodoni Moda', serif;
+//     font-style: italic;
+//     margin-top: 10px;
+//     }
+// }
+
+// .absolute {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: black;
+//     z-index: 1;
+// }
+
+.loader-wrapper {
+    height: 100vh;
+    overflow-y: hidden;
+    padding: 10px 0;
+    width: 100vw;
+    background-color: #f6f0e3;
+    display: flex;
+    animation: bg 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 5.9s;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        opacity:1;
+        animation: show 2.5s, color 0.5s forwards;
+        font-size: 4vw;
+        color: #000;
+        font-weight: 600;
+        &.outline{
+            color: #f6f0e3;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+        }
+    }
+    h2 {
+        font-size: 4vw;
+        color: #000;
+        font-weight: 600;
+        &.middle {
+            opacity: 1;
+            animation: scale 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 6.5s;
+        }
+    }
+
+    @for $i from 0 through 3 {
+        h1:nth-child(#{$i + 1}n) {
+           animation-delay: #{$i + 1 - 0.5}s;
+        }
+    }
+
+    @for $b from 0 through 4 {
+        h1:nth-child(9n - #{$b}) {
+           animation-delay: #{$b + 1 - 0.5}s;
+        }
+    }
+
+}
+
+@keyframes show{ 0% {opacity: 0;} 90%{opacity: 0;} 95% {opacity: 0;} 100%{opacity: 1;} }
+@keyframes scale{0% {transform: none;color: #f6f0e3} 100% {transform: scale(10, 10); color: #f6f0e3}}
+@keyframes bg{0% {background-color: #f6f0e3;} 100% {background-color: #000;}}
+@keyframes color{100% {color: #000;}}

@@ -1,0 +1,68 @@
+.header{
+    padding: 50px 0;
+    .header-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        .logo {
+            h1 {
+                font-size: 30px;
+            }
+        }
+        .links {
+            display: flex;
+            gap: 1rem;
+            .link {
+                height: 30px;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                &:hover {
+                    .mask {
+                        .link-container {
+                            transform: translateY(-21px);
+                            .link-title1 {
+                                transform: rotate(20deg);
+                            }
+                            .link-title2 {
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+                }
+                .mask {
+                    height: 21px;
+                    padding: 0;
+                    position: relative;
+                  
+                    /*  Remove overflow to see how it works　:) */
+                    overflow: hidden;
+                    .link-container {
+                        transition: transform 0.5s ease;
+                        .title {
+                            font-size: 20px;
+                            line-height: 21px;
+                            display: block;
+                          
+                            /*  Set same font-size and line height  */
+                          
+                            transition: transform 0.5s ease;
+                        }
+                        .link-title1 {
+                            transform-origin: right center;
+                        }
+                          
+                        .link-title2 {
+                            transform-origin: left center;
+                            transform: rotate(20deg);
+                            -webkit-text-stroke-color: #ffffff;
+                            -webkit-text-stroke-width: 1px;
+                            color:#111;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
